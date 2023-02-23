@@ -7,23 +7,14 @@
     <title>JavaScript</title>
 
     <script>
-        if (2 != '2'){
-            document.write('Entrou dentro do bloco if (verdadeiro)') 
+        var media = 7
+        var nota = prompt('Digite a nota do aluno: ')
+         
+        if(nota>=media){
+            document.write('Aprovado')
         }else{
-            document.write('Entrou dentro do bloco else (falso)') 
-        } //cairá no bloco else, pois 2 não é diferente de '2', e sim, não idêntico
-
-        if (2 == '2'){
-            document.write('Entrou dentro do bloco if (verdadeiro)') 
-        }else{
-            document.write('Entrou dentro do bloco else (falso)') 
-        } //true
-
-        if (2 === '2'){
-            document.write('Entrou dentro do bloco if (verdadeiro)') 
-        }else{
-            document.write('Entrou dentro do bloco else (falso)') 
-        } //false
+            document.write('Reprovado')
+        }
     </script>
 </head>
 <body>
