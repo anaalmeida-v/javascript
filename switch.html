@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <script>
+        
+        var parametro = '2'
+        
+        switch(parametro){ /*pode haver uma modificação de tipo da variavel(parseInt/parseFloat/toString)*/
+             case 1:
+             document.write('Parametro 1')
+                break
+
+            case '2':
+                document.write('Parametro 2')
+                break
+
+            default:
+                document.write('Default')
+        }
+
+
+
+        /**********************explicação do método:*/
+        var opcao = 2
+        switch(opcao/*-->variavel ou valor pré-definido*/){
+
+            case 1:/* -- > função - comparar o valor encaminhado com o switch com o valor do case
+                     -- > comparação feita utilizando o operador idêntico*/
+                //trecho de código que será executado
+                break
+
+            case 2:
+                //trecho de código que será executado
+                break
+
+            default:
+                //trecho de código que será executado
+                break
+        }/* -->nesse exemplo, o case que será disparado, será o 'case 2', por conta da comparação que será feita com a variável(nesse caso)'opcao'
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
