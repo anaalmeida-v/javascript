@@ -13,7 +13,7 @@
         só será true, quando todas as operações forem verdadeiras
     
         -- > true && true && false = false
-        */
+        
 
         if(2 == 2 && 3 >=1 && 'a' == 'b') {
             document.write('Verdadeiro')
@@ -29,7 +29,7 @@
              caso todos forem false, a expressão resulta em falso
 
         -- > true || true || false = true 
-        */
+        
 
         if(2 == 2 || 3 >= 1 || 'a' == 'b'){
             document.write('Verdadeiro')
@@ -44,13 +44,36 @@
         de negação reverte a expressão
 
         -- > false = false
-        */
+        
 
         if(!(5 >= 2)){
             document.write('Verdadeiro')
         }else{
             document.write('Falso')
-        }
+        }*/
+
+        var nota = prompt('Digite a nota do aluno: ')
+        var faltas = prompt('Digite a quantidade de faltas: ')
+
+        var media = 7
+        var faltas_maximas = 15
+         
+        
+        /*if(nota>=media && faltas <= faltas_maximas){
+            document.write('Aprovado')
+            //lógica
+        }else{
+            document.write('Reprovado')
+        }*/
+
+        /* operador ternário
+        
+            sintaxe:
+            var <variavel> = ? <condicao> ? <verdadeiro> : <falso>
+        */
+
+        var resultado = nota >= media && faltas <= faltas_maximas ? 'Aprovado' : 'Reprovado'
+        document.write(resultado)
     </script>
 </head>
 <body>
