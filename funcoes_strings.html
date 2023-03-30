@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <script>
+        var nome = 'Jorge Sant Ana'
+
+        //propriedade length - retorna quantidade de caracteres de uma string
+        document.write('Jorge Sant Ana'.length())
+        /*charAt() - retorna um caractere com base na sua posição dentro da cadeia de caracteres(é encaminhado um determinado índice,
+        e o charAt retorna o número contido naquele índice)*/
+        document.write('Jorge Sant Ana'.charAt(7))
+        /*indexOf() - retorna posição da primeira ocorrência de um valor específico dentro da string*/
+        document.write(nome.indexOf(12))
+        //replace() - permite com base em um valor de pesquisa e em um outro valor de modificação substituir textos dentro de uma string
+        document.write(nome.replace('Sant Ana', 'Silva'))
+        /*substr - permite extrair parte de uma string com base em uma posição inicial
+        seguida de um valor que representa a quantidade de caracteres a frente daquela posição inicial
+        é como se ele recortasse aquela string*/
+        document.write(nome.substr(6, 4))//nesse exemplo, a partir do caractere 6 será recuperado quatro caracteres a frente, e o 6 também
+        //toLowerCase - converter todos os caracteres de um string para a caixa baixa(caracteres mínusculos)
+        document.write(nome.toLowerCase())
+        //to UpperCase - converte caracteres para caixa alta(caracteres maiúsculos)
+        document.write(nome.toUpperCase())//essees dois podem ajudar na formatação ou armazenamento de textos.
+        //trim - remove os espaços em branco das extremidades de uma string
+        document.write('-' + nome.trim() + '-')
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
