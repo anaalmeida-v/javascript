@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+
+        var data = new Date()
+        /*-- criação de uma nova instância que nesse exemplo é o Date
+        -- new Date() - faz com que um novo objeto de data seja criado e atribuído a uma variável
+        -- a partir dessa variável, tem-se acesso a um objeto que contém todos os detalhes de data, do momento da instância desse objeto
+        -- essas infromações são criadas com base na data e no sistema operacional em que o browser está rodando*/
+        
+        document.write(data.getDate() + '<br>')
+        //no método acima foi retornada a data
+
+        document.write(data.getMonth() + 1 + '<br>')
+        /*retorna o mês
+        um detalhe desse método é que ele considera os meses de 0 a 11(ou seja: janeiro-0 e dezembro-11)
+        adicionando uma unidade ao método, é possível fazer que seja exibido de forma padrão(como mostrado acima)*/
+
+        document.write(data.getFullYear() + '<br>')
+        //retorna o ano
+
+        document.write(data.getDate() + '/' + (data.getMonth() + 1 + '/' + (data.getFullYear())))
+        //acima foi retornado dia, mês e ano no formato de data.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
