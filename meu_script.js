@@ -396,8 +396,8 @@ console.log(soma())  //caso não haja parâmetros definidos, o valor dos número
 
 //3 escopos: global, função e o bloco
 
-var serie =  'Friends'
-        
+var serie = 'Friends'
+
 //escopo de bloco
 if (true) {
     var serie2 = 'Game of Thrones'
@@ -417,7 +417,7 @@ x()
 
 /*****funções anonimas****/
 
-var exibirSaudacao = function(nome)  {
+var exibirSaudacao = function (nome) {
     document.write('Olá ' + nome + ', tudo bem?')
 }
 
@@ -428,8 +428,9 @@ sintaxe e funcionamento idênticos a de uma função comum.
 
 única diferença é a ausência do nome*/
 
-/*****funcoes string****/
 
+
+/*****funcoes string****/
 
 var nome = 'Jorge Sant Ana'
 
@@ -452,3 +453,50 @@ document.write(nome.toLowerCase())
 document.write(nome.toUpperCase())//essees dois podem ajudar na formatação ou armazenamento de textos.
 //trim - remove os espaços em branco das extremidades de uma string
 document.write('-' + nome.trim() + '-')
+
+
+/****funções matemáticas*******/
+var x = Math.ceil(10.380)
+document.write(x + '<br />')
+/* Math.ceil - caso haja um valor com fração, essa função fará o arredondamento para cima
+um exemplo é: 10.122, seria arredondado para 11*/
+
+var x = Math.floor(10.380)
+document.write(x + '<br />')
+/*Math.floor - ao contrário da 'ceil', essa função, independente da fração, é considerada a parte inteira
+no exemplo de 10.122, ele seria arredondado para 10*/
+
+var x = Math.round(10.500)
+document.write(x + '<br />')
+/*Math.round - diferentemente do floor e ceil, esse método leva em consideração o peso da fração, 
+ou seja, dependendo do peso, ele arredonda para baixo ou para cima. Ex
+10.502 - 11
+10.200 - 10
+(de 5 para cima seria arredondado para 11, de 4 para baixo será arredondado para 10.)*/
+
+var x = Math.random()
+document.write(x + '<br />')
+//Math.random() - atribui-se o retorno de um valor aleatório entre 0 e 1 para avariável, muito utilizado em jogos.
+
+
+
+/**********funções datas**********/
+var data = new Date()
+/*-- criação de uma nova instância que nesse exemplo é o Date
+-- new Date() - faz com que um novo objeto de data seja criado e atribuído a uma variável
+-- a partir dessa variável, tem-se acesso a um objeto que contém todos os detalhes de data, do momento da instância desse objeto
+-- essas infromações são criadas com base na data e no sistema operacional em que o browser está rodando*/
+
+document.write(data.getDate() + '<br>')
+//no método acima foi retornada a data
+
+document.write(data.getMonth() + 1 + '<br>')
+/*retorna o mês
+um detalhe desse método é que ele considera os meses de 0 a 11(ou seja: janeiro-0 e dezembro-11)
+adicionando uma unidade ao método, é possível fazer que seja exibido de forma padrão(como mostrado acima)*/
+
+document.write(data.getFullYear() + '<br>')
+//retorna o ano
+
+document.write(data.getDate() + '/' + (data.getMonth() + 1 + '/' + (data.getFullYear())))
+        //acima foi retornado dia, mês e ano no formato de data.
