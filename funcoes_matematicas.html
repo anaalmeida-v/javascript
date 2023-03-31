@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JvaScript</title>
+    <script>
+
+        var x = Math.ceil(10.380)
+        document.write(x + '<br />')
+        /* Math.ceil - caso haja um valor com fração, essa função fará o arredondamento para cima
+        um exemplo é: 10.122, seria arredondado para 11*/
+
+        var x = Math.floor(10.380)
+        document.write(x + '<br />')
+        /*Math.floor - ao contrário da 'ceil', essa função, independente da fração, é considerada a parte inteira
+        no exemplo de 10.122, ele seria arredondado para 10*/
+
+        var x = Math.round(10.500)
+        document.write(x + '<br />')
+        /*Math.round - diferentemente do floor e ceil, esse método leva em consideração o peso da fração, 
+        ou seja, dependendo do peso, ele arredonda para baixo ou para cima. Ex
+        10.502 - 11
+        10.200 - 10
+        (de 5 para cima seria arredondado para 11, de 4 para baixo será arredondado para 10.)*/
+
+        var x = Math.random()
+        document.write(x + '<br />')
+        //Math.random() - atribui-se o retorno de um valor aleatório entre 0 e 1 para avariável, muito utilizado em jogos.
+    </script> 
+</head>
+
+<body>
+
+</body>
+
+</html>
