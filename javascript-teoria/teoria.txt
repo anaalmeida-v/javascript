@@ -1,0 +1,24 @@
+java script - oque é?
+
+
+
+linguagem de programação de alto nível
+
+
+
+-uma linguagem de programação de alto nível, é aquela que é parecida com a linguagem humana.
+
+-quanto mais próximo do idioma humano, mais fácil é de ler e escrever aquela linguagem.pode ser executado no client-side(objetivo no curso), ou seja, dentro dos browsers(firefox, chrome, safari e etc.)
+
+pode ser executado no server-side(do lado do servidor das aplicações web)
+
+pode haver o desenvolvimento de aplicações desktop, utilizando por exemplo, o electron ou mesmo a criação de aplicações mobile para IOS ou ANDROID utilizando o framework react native
+
+
+
+atualmente, praticamente todas as áreas de programação, podem ser cobertas utilizando apenas javascript, é uma linguagem muito poderosa que vem crescendo cada vez mais
+
+java tbm é uma linguagem de programação, porém, é mantida pela oracle com  distribuições específicas para cada plataforma, já o javascript é mantido pela w3c, que é um consórcio que cuida da padronização de tecnologias web, como html ou css.
+
+a w3c tem um projeto onde pode-se ter acesso a documentação de diversas linguagens - w3schools
+

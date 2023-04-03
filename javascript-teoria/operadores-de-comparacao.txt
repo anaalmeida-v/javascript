@@ -1,0 +1,21 @@
+operadores de comparação
+
+-conhecido como operadores relacionais
+
+-servem para formar as expressões condicionais para o comando if, são eles:
+
+igual(=) - Verifica se os valores comparados são iguais
+
+idêntico(===) - Verifica se os valores comparados são iguais e do mesmo tipo
+
+diferente(!=) - Verifica se os valores comparados são diferentes  
+
+não idêntico(!==) - Verifica se os valores comparados são diferentes  e de tipos diferentes
+
+menor(<) - verifica se o valor da esquerda é menor que o da direita
+
+maior(>) - verifica se o valor da direita é maior que o da esquerda
+
+menor igual(<=)  - verifica se o valor da esquerda é menor ou igual que o da direita
+
+maior igual(>=) - verifica se o valor da direita é maior ou igual que o da esquerda

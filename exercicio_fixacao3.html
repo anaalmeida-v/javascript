@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Fixação JavaScript</title>
+
+    <script>
+        var num1 = prompt('Digite um número')
+        var operacao = prompt('Digite uma operação')
+        var num2 = prompt('Digite um segundo número')
+
+        function calculo(num1, num2, operacao){
+            num1 = parseFloat(num1)
+            num2 = parseFloat(num2)
+
+            var resultado = 0
+
+            if(operacao == 'soma'){
+                resultado = num1 + num2
+            }
+            if(operacao == 'subtração') {
+                resultado == num1 - num2
+            }
+            return resultado
+        }
+
+        document.write('O resultado é: ' + calculo(num1, num2, operacao2))
+
+    </script>
+</head>
+<body>
+</body>
+</html>

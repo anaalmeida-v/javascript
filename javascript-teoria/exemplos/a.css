@@ -1,0 +1,44 @@
+:root {
+    --title-color: yellow;
+    --bg-color: white;
+    --font-color: black;
+    --default-space: 15px;
+    --title-font-size: 22px;
+    --content-font-size: 16px;
+}
+
+body.theme-dark {
+    --bg-color: black;
+    --font-color: white;
+}
+
+.title-1 {
+    font-size: 30px;
+    color: var(--title-color);
+    margin: var(--default-space);
+}
+.title-2 {
+    font-size: 35px;
+    color: var(--title-color);
+    margin: var(--default-space);
+}
+.title-3 {
+    font-size: 40px;
+    color: var(--title-color);
+}
+
+.nota {
+    width: 400px;
+    max-height: 300px;
+    border-radius: 15px;
+}
+
+.nota.vermelho {
+    background-color: red;
+}
+.nota.azul {
+    background-color: blue;
+}
+.nota.verde {
+    background-color: green;
+}

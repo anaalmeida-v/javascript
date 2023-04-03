@@ -554,3 +554,26 @@ document.write('1 dia tem:' + milissegundos_por_dia + ' milissegundos')
 //imprimir divisão da diferença de milissegundos pelos milissegundos existentes em um dia
 document.write('<br>' + '<br>' + '<hr>')
 document.write('A diferença entre data1 e data2 é de: ' + Math.ceil(millisegundos_entre_datas / milissegundos_por_dia) + 'dia(s)')
+
+
+/*******EXERCICIO_FIXACAO3*********/
+var num1 = prompt('Digite um número')
+var operacao = prompt('Digite uma operação')
+var num2 = prompt('Digite um segundo número')
+
+function calculo(num1, num2, operacao) {
+    num1 = parseFloat(num1)
+    num2 = parseFloat(num2)
+
+    var resultado = 0
+
+    if (operacao == 'soma') {
+        resultado = num1 + num2
+    }
+    if (operacao == 'subtração') {
+        resultado == num1 - num2
+    }
+    return resultado
+}
+
+document.write('O resultado é: ' + calculo(num1, num2, operacao2))

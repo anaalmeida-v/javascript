@@ -1,0 +1,305 @@
+javascript
+
+oque é?
+
+linguagem de programação de alto nível
+-uma linguagem de programação de alto nível, é aquela que é parecida com a linguagem humana.
+-quanto mais próximo do idioma humano, mais fácil é de ler e escrever aquela linguagem.
+
+pode ser executado no client-side(objetivo no curso), ou seja, dentro dos browsers(firefox, chrome, safari e etc.)
+pode ser executado no server-side(do lado do servidor das aplicações web)
+pode haver o desenvolvimento de aplicações desktop, utilizando por exemplo, o electron ou mesmo a criação de aplicações mobile para IOS ou ANDROID utilizando o framework react native
+atualmente, praticamente todas as áreas de programação, podem ser cobertas utilizando apenas javascript, é uma linguagem muito poderosa que vem crescendo cada vez mais
+
+não é java
+java tbm é uma linguagem de programação, porém, é mantida pela oracle com  distribuições específicas para cada plataforma, já o javascript é mantido pela w3c, que é um consórcio que cuida da padronização de tecnologias web, como html ou css.
+a w3c tem um projeto onde pode-se ter acesso a documentação de diversas linguagens - w3schools
+
+-com o javascript sendo executado no brower (client-side), é permitido adicionar dinâmica à página web
+-utlizando apenas html e css, é possível criar sites incríveis(porém, somente estáticas)
+-para ser possível estabelecer uma dinâmica e uma interação legal com o usuário, é importante utilizar uma linguagem de programação(nesse caso javascript)
+-com isso, passa a ser permitido, abrir caixas de diálogo para recuperar valores do usuário, exibir alertas, efetuar cálculos, validar dados de formulários, entre outras ações de dinâmica
+-toda parte dinâmica de uma página, é estabelecida com base na codificação javascript
+
+o javascript é uma linguagem de programação interpretada
+- escreve-se o scripts e são encaminhados ao browser
+-o browser, em tempo de execução da página, faz a leitura e a interpretação daquele script
+
+ferramenta do desenvolvedor
+-ctrl + shift + i
+
+
+inclusão do javascript no html
+
+diretamente no arquivo html:
+          <script>
+               //codificação javascript
+          </script>
+     com isso, o browser no momento da interpretação, na identificação da tag script, ele entende que aquele conteúdo se trata de uma codificação javascript a ser interpretada, e não de      um      elemento html
+
+a partir de um arquivo externo:
+<script src="meu_script.js"></script>
+o nome do arquivo geralmente é criado a partir da função dele(indica para que ele serve)
+a escrita desse nome tem que respeitar regras, como, não conter espaços e nem caracteres especiais, para evitar erros
+
+-o resultado dos dois métodos de inclusão do código java, é o mesmo.
+-uma dica é, se sua codificação javascript for muito extensa, vale a pena deslocar o conteúdo para um arquivo a parte, caso o contrário, não tem problema fazer a codificação dentro do html
+
+- pode-se criar blocos de javascript, quantas vezes forem necessárias
+- pode-se fazer várias inclusões de arquivos externos
+-pode-se adicionar dentro do head ou do body da pág html
+-a instrução <script language="javascript"></script> foi depreciada(esquecida, não é mais utilizada, não funcional).
+
+a inclusão da tag <script></script> no head, faz com que essa tag seja processada antes mesmo do body
+adicionar script de arquivo externo no html
+<head>
+    <script src="meu_script.js">
+    </script>
+</head>
+arquivo js nessa ocasião:
+alert('Olá, seja bem vindo ao curso!')
+script dentro do head
+<head>
+    <script>
+        alert('Olá, seja bem vindo ao curso!')
+    </script>
+</head> 
+
+-javascript é utilizado para interagir com elementos html
+-esses elementos são renderizados com base em uma árvore de elementos, conhecida como Document Object Model ou modelo de objeto de documento(DOM)
+-elementos html ficam disponíveis no DOM e podem ser selecionados a partir do javascript,  para sofrerem ou não algum tipo de ação
+
+
+um ex.:
+elemento input não está funcionando, porque script está sendo executado, antes mesmo da criação do elemento
+<head>
+<script src="meu_script.js"></script>
+</head>
+<body>
+    <h1>Curso de JavaScript</h1>
+    <input type="text" 
+    placeholder="Teste de precedência"
+    id="nome"
+    disabled="disabled">
+</body>
+</html>
+a resolução desse problema, seria colocar o script abaixo do elemento input.
+
+essas regras de precedência, serve tanto para um arquivo dentro do html, quanto para um arquivo externo.
+
+
+
+javascript - comentários
+
+-pratica importante
+-trechos de instruções dentro do script que são desconsiderados pelo interpretador da linguagem.
+-comentar trechos de códigos: útil no processo de debug(testes) da aplicação
+-incluir descrições aos scripts: fazer um resumo da lógica de uma forma clara, dizer oque exatamente um bloco de código específico faz.
+de tal modo que se alguém olhar o script, essa pessoa tenha condições de compreender facilmente oque aquele bloco de código faz
+-ajuda no processo de documentação dos scripts
+
+existem 2 formas de comentar
+comentário de uma linha:
+ //comentario de uma linha
+comentário de múltiplas linhas
+ /*
+        comentário de
+        múltiplas linhas
+*/
+
+
+javascript - variáveis
+-espaços em memória que armazenam informações de modo temporário
+-funcionam como repositórios, ou seja, armazenam determinada informação, então, a partir do nome da variável, pode-se recuperar alguma informação que a foi associada
+-possui tipos distintos
+-o separador de frações, ou  seja, de casas decimais, é representado pelo ponto
+-em javascript tem alguns tipos diferenciados de variáveis, os principais são esses, que veremos com muita frequência no dia a dia:
+string-basicamente responsáveis pelo armazenamento de textos
+number- armazenam valores numéricos, tanto positivos, quanto negativos, inteiros ou fracionados
+como por ex.: 7, -5 ou 80.22
+as variáveis desse tipo, em outras linguagens de programação, geralmente são subdivididas em tipos distintos(int e float)
+boolean- armazenamento de estados, valores lógicos(true(verdadeiro) ou false(falso))
+o objetivo dessas variáveis é servirem para testes condicionais(tomadas de decisões dentro das habilitações), com isso, conclue-se que essa variável é bem restrita, aceitando apenas 2 valores
+regras para declaração de variáveis
+-não podem ser iniciadas com  números, apenas com letras ou underline(_);
+-não podem ser utilizados caracteres especiais, como (ç) (^) (~)
+-não pode-se usar palavras que já são reservadas para a declaração de uma variável(perigo de ocorrer erros)
+-declarando variáveis com a instrução 'var'
+embora seja opcional, é muito recomendada que seja usada, pois, indica ao interpretador de javascript que a instrução a seguir é uma declaração de variável, assim, o interpretador não precisará testar a instrução, além disso, a interpretação fica masi fácil até para nós mesmos(humanos)
+case sensitive - ou seja, faz diferenciações entre palavras maiúsculas e minúsculas.
+caso você declare uma variável apenas com letras maiúsculas e depois tente recuperar com letras minúsculas, não será identificada, por conta de javascript ser uma linguagem case sensitive.
+var curso, var Curso e var CURSO são variáveis diferentes.
+recomendado que utilize um nome de variável que represente bem o seu conteúdo
+exemplos de declarações de variáveis válidas e inválidas
+nomes válidos:
+var nome, var AulaVariaveis, var_Idade
+nomes inválidos:
+var 123nome, var número
+
+var (nome-variável) = 'valor que será atribuido'
+-sinal de igual(=) - significa que o valor do elemento à direita, está sendo atribuído ao elemento à esquerda
+-no valor que será atribuido(valor a direita) usa-se aspas ou aspas duplas(se for uma string)
+-atencão no abrimento e fechamento de aspas
+exemplo:
+//string
+        var texto = 'Curso de JavaScript'
+number
+//number
+        var numeroInteiro = -7
+nesse exemplo, o nome da variável é 'numeroInteiro', como é só o nome, não está definindo se é ou não um valor inteiro
+oque define mesmo é o valor que será atribuído após o sinal de igual
+significa que mesmo com esse nome, pode-se colocar uma fração como valor.
+-o ponto define apenas uma fração, a representação textual de um valor numérico em um navegador, é feita de outra forma
+var numeroFracionado = 10.75
+var numeroFracionado = 11210.65
+ou seja, o dado do tipo number, considera apenas a parte inteira e a parte fracionada de um valor numerico
+boolean
+//boolean
+        var teste = true
+
+a tipagem da variável é feita pelo valor no momento da atribuição.
+
+
+alert()   //serve para abrir um dialog
+-na prática não é utilizado em aplicações de introdução, mas é um recurso bacana para debug
+
+-a partir do alert, pode-se expor o valor de uma variável
+
+
+
+document.write() //o nome de variável adicionado será exibido no browser
+-o 'document' é um objeto que representa o DOM
+-todos os elementos html criados na página, estão contidos no elemento 'document'
+-a partir desse  método, pode-se escrever valores dentro do browser
+console.log() //valor da variavel aparecerá no console(bom para strings mais complexas)
+-comando muito utilizado no processo de debug
+-pode ser incluido diversos momentos na logica do script, para testar determinados valores, a partir da opção Console na ferramenta de dev no browser
+em ambos, no caso desse exemplo, qualquer uma dessas variáveis podem ser adicionadas
+  //***********() - texto, numeroInteiro, numeroFracionado, teste
+
+-unificar os valores textuais da variáveis, de forma a montar strings ou textos personalizados
+-permite aplicar uma dinâmica no conteúdo que é exibido, em determinados momentos da apicação
+
+adicionando uma variável dentro do método 'document.write()'
+<script>
+        var nome = 'Maria'
+        document.write('<h1>Olá ' + nome + ', tudo bem?</h1>')
+    </script>
+var nome = 'Maria'
+        var idade = '40'
+        document.write('<h1>Olá ' + nome + ', tudo bem? estou vendo aqui que você possui ' +idade+ ' anos.</h1>')
+
+abrir um dialog com uma mensagem de texto
+        var nome = prompt('Digite o seu nome: ')
+        var idade = prompt('Digite sua idade: ')
+        document.write('<h1>Olá ' + nome + ', tudo bem? estou vendo aqui que você possui     ' +idade+ ' anos.</h1>')
+prompt('')
+
+no console, pode-se ver a diferença entre os tipos de variáveis:
+digitando o comando 'console.log()' e colocando dentro das aspas a variável
+-há uma modificação de cores para a diferenciação das variáveis
+
+-opcional
+-não dá erro e nem modifica nada no código
+-questão de costume em utilizar ou não
+
+
+
+javascript - valores null e undefined
+
+-valores primitivos
+-assim como number, string e boolean valores nativamente suportados pelo javascript
+-diferença prática:
+null representa a ausência intencional de um valor
+var teste = null
+nesse exemplo a variável 'teste' não possui um valor
+var teste2 = undefined
+indica que a variável está indefinida
+var teste2
+se a variável for apenas declarada, sem valor nenhum, ela será undefined
+
+ alterando valores de variáveis
+        var teste = null
+        console.log(teste)
+        teste = 'Valor modificado com sucesso'
+        console.log(teste)
+        teste = 25
+        console.log(teste)
+nesse exemplo, a variável teste foi modificada de null para string e depois para number
+em seguida de cada modificação foi usado o método console.log(), para assim, podermos ver as modificações no console do browser
+
+
+javascript - if/else
+
+-estrutura de controle
+-nos possibilita definir qual fluxo a aplicação vai tomar, com base em uma determinada condição
+síntaxe do comando
+if(condição){
+    //trecho de código que será exibido
+}else{
+    //trecho de código que será exibido
+}
+
+-caso a condição seja verdadeira será executado o bloco de código do if, senão será executado o do else
+-utilização do else é opcional, caso não tenha trecho de código, não é necessário usar
+-comando if/else pode ser encadeado
+-caso a 1a condição seja falsa, é possível testar uma próxima e assim consecutivamente, ou desviar o fluxo para condição else(opcional) - comando else if
+if(condição){
+    //trecho de código que será exibido
+}else if(condição){
+    //trecho de código que será exibido
+}else{
+    //trecho de código que será exibido
+}
+
+
+javascript - operadores de comparação
+-conhecido como operadores relacionais
+-servem para formar as expressões condicionais para o comando if
+igual(=) - Verifica se os valores comparados são iguais
+idêntico(===) - Verifica se os valores comparados são iguais e do mesmo tipo
+diferente(!=) - Verifica se os valores comparados são diferentes 
+não idêntico(!==) - Verifica se os valores comparados são diferentes  e de tipos diferentes
+menor(<) - verifica se o valor da esquerda é menor que o da direita
+maior(>) - verifica se o valor da direita é maior que o da esquerda
+menor igual(<=)  - verifica se o valor da esquerda é menor ou igual que o da direita
+maior igual(>=) - verifica se o valor da direita é maior ou igual que o da esquerda
+
+
+
+javascript - casting de tipos
+
+convertendo uma string para number
+declaração de variáveis:
+        var variavel1 = prompt('Digite algum número: ')
+        var variavel2 = prompt('Digite outro número: ')
+        document.write(variavel1 + variavel2) 
+            //a soma não será efetuada se não houver a conversão
+conversão de string para number(nesse caso, tipo int)
+        variavel1 = parseInt(variavel1)
+        variavel2 = parseInt(variavel2)
+adiciona-se essas linhas de código, abaixo da declaração de variáveis
+-além do parseInt(), há também o parseFloat()
+serve para a conversão de um elemento para float, esse método preserva a fração de um número
+
+
+parseInt() e parseFloat()
+parseInt() - remove a fração, preservando somente a parte inteira do número
+parseFloat() - preserva a fração
+
+
+
+conversão de um number para uma string
+
+var variavel1 = 10
+        var variavel2 = 20
+        document.write(variavel1.toString() + variavel2.toString())
+a conversão acontece na concatenação com o método .toString()
+-operadores que permitem conectar operações de comparação
+-cada operação resulta em true ou false, e através dos operadores lógicos, pode-se juntar os resultados, para quem sabe encontrar um segundo resultado.
+
+
+o javascript, possui três operadores
+E(&&) - verdadeiro se todas as expressões forem verdadeiras
+OU(||) - verdadeiro se pelo menos uma das expressões for verdadeira
+Negação(!) - inverte o resultado da expressão de comparação
