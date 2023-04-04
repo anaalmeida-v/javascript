@@ -613,3 +613,9 @@ function acao1() {
         <option value="2">-- Segunda opção --</option>
     </select>
 */
+
+/****dom getElement******/
+    //console.log(document.getElementById('nome_usuario'))
+        //console.log(document.getElementsByTagName('input'))
+        //console.log(document.getElementsByClassName('campo_texto'))
+        console.log(document.getElementsByName('nome'))

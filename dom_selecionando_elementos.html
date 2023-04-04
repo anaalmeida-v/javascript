@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Digite seu nome" id="nome_usuario" class="campo_texto" name="nome">
+    <!--o input acima é um dom da pagina html
+    não pode ter o mesmo id na mesma página 
+    o getElementById() - espera recuperar apenas um elemento;
+                       - é muito utilizado no dia a dia(utilizado em 85% dos casos) porque normalmente queremos
+                     recuperar um elemento específico(que é sua função)
+    getElementByTagName() - recupera nome da tag; ex.: input, a..
+    getElementByClassName() - recupera nome da classe da tag
+    getElementByName() - recupera nome dentro do elemento name=""
+-->
+
+    <script>
+        //console.log(document.getElementById('nome_usuario'))
+        //console.log(document.getElementsByTagName('input'))
+        //console.log(document.getElementsByClassName('campo_texto'))
+        console.log(document.getElementsByName('nome'))
+    </script>
+</body>
+
+</html>
