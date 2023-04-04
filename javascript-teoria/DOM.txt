@@ -1,0 +1,6 @@
+DOM - Document Object Model
+
+o que é - API que permite o acesso via JavaScript aos elementos da página; através dessa api que é possível acessar e modificar os elementos html das páginas
+
+html é como uma string grande, por ser uma linguagem de marcação de texto, as tags permitem a construção de hiper textos
+quando o navegador baixa o script, é como se ele estivesse fazendo o dowload de um texto
