@@ -602,3 +602,14 @@ function acao1() {
 <body onscroll="console.log('evento disparado')"> <!--onresize="document.log('evento disparado')">
     <div style="height: 3000px; width: 125px; background: #ccc;"></div>
     */
+
+/***eventos-formulario****
+<body>
+    <input onfocus="console.log('recebeu foco')" onblur="console.log('perdeu foco')" type="text">
+
+    <select onchange="console.log('Estado modificado')">
+        <option>-- Selecione --</option>
+        <option value="1">-- Primeira opção --</option>
+        <option value="2">-- Segunda opção --</option>
+    </select>
+*/
