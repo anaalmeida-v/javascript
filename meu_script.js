@@ -594,6 +594,11 @@ function acao2() {
 }
 
 /********eventos-teclado**********/
-function acao1(){
+function acao1() {
     alert('evento disparado')
 }
+
+/*******eventos-janela*******
+<body onscroll="console.log('evento disparado')"> <!--onresize="document.log('evento disparado')">
+    <div style="height: 3000px; width: 125px; background: #ccc;"></div>
+    */
