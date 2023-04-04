@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        function acao1(){
+            alert('evento disparado')
+        }
+    </script>
+</head>
+<body>
+    <h2>onkeydown</h2>
+    <input onkeydown="acao1()" type="text">
+
+    <h2>onkeyup</h2>
+    <input onkeyup="acao1()" type="text">
+
+    <h2>onkeypress</h2>
+    <input onkeypress="acao1()" type="text">
+</body>
+</html>
+<!--eventos que são disparados a partir da interação do usuário com o browser a partir do teclado
+onkeydown - acionado quando alguma tecla é pressionada
+onkeypress - acionado quando a tecla é mantida pressionada(não funciona com todas as teclas)
+onkeyup - quando a tecla é liberada-->

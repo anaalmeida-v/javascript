@@ -592,3 +592,8 @@ function acao1() {
 function acao2() {
     alert('O cursor do mouse deixou a região do elemento')
 }
+
+/********eventos-teclado**********/
+function acao1(){
+    alert('evento disparado')
+}
