@@ -662,3 +662,8 @@ function modificaEstilo(corDeFundo) {
     document.getElementById('quadrado').style.width = 1
     document.getElementById('quadrado').style.height = a
 }
+/********manipulando clases de elementos***********/
+
+function modificaClasse() {
+    document.getElementById('mensagem').className = 'estilo2'
+}
