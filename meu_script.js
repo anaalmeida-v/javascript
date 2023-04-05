@@ -615,41 +615,50 @@ function acao1() {
 */
 
 /****dom getElement******/
-    //console.log(document.getElementById('nome_usuario'))
-        //console.log(document.getElementsByTagName('input'))
-        //console.log(document.getElementsByClassName('campo_texto'))
-        console.log(document.getElementsByName('nome'))
+//console.log(document.getElementById('nome_usuario'))
+//console.log(document.getElementsByTagName('input'))
+//console.log(document.getElementsByClassName('campo_texto'))
+console.log(document.getElementsByName('nome'))
 
 
-        /******manipulando valores de inputs(text)*******/
-        //verifica  o caracter digitado, se é letra vai para o campo 'Letras' se número vai para o campo 'Números'
+/******manipulando valores de inputs(text)*******/
+//verifica  o caracter digitado, se é letra vai para o campo 'Letras' se número vai para o campo 'Números'
 
-        function distribuiCaracter() {
-            //selecionar valor digitado
-            var caracter = document.getElementById('entrada').value
-            //limpar o campo de digitação - seleciona e deixa o campo do elemento vazio
-            document.getElementById('entrada').value = ''
+function distribuiCaracter() {
+    //selecionar valor digitado
+    var caracter = document.getElementById('entrada').value
+    //limpar o campo de digitação - seleciona e deixa o campo do elemento vazio
+    document.getElementById('entrada').value = ''
 
-            //limpar espaços em branco nas extremidades da string
-            caracter.trim()
+    //limpar espaços em branco nas extremidades da string
+    caracter.trim()
 
-            switch (caracter) {
+    switch (caracter) {
 
-                case '0':
-                case '1':
-                case '2':
-                case '3':
-                case '4':
-                case '5':
-                case '6':
-                case '7':
-                case '8':
-                case '9':
-                    //adicionar caracterer no campo referente a números
-                    document.getElementById('apenas_numeros').value += caracter
-                    break;
-                default:
-                //adicionar o caracter no campo referente a letra
-                document.getElementById('apenas_letras').value += caracter
-            }
-        }
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+            //adicionar caracterer no campo referente a números
+            document.getElementById('apenas_numeros').value += caracter
+            break;
+        default:
+            //adicionar o caracter no campo referente a letra
+            document.getElementById('apenas_letras').value += caracter
+    }
+}
+
+/******manipulando estilos de elemento*******/
+function modificaEstilo(corDeFundo) {
+
+    document.getElementById('quadrado').style.background = corDeFundo
+    //atribuindo corDeFundo a background no atributo style
+    document.getElementById('quadrado').style.width = 1
+    document.getElementById('quadrado').style.height = a
+}
