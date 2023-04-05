@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        function inputGanhaFoco() {
+            document.getElementById('bg').style.background = "yellow"
+        }
+        function inputPerdeFoco() {
+            var valorInput = document.getElementById('bg').value
+
+            if (valorInput.length < 3) {
+                document.getElementById('bg').style.background = "red"
+            } else {
+                document.getElementById('bg').style.background = "green"
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="bg" onfocus="inputGanhaFoco()" onblur="inputPerdeFoco()">
+</body>
+</html>

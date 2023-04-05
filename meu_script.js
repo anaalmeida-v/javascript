@@ -667,3 +667,17 @@ function modificaEstilo(corDeFundo) {
 function modificaClasse() {
     document.getElementById('mensagem').className = 'estilo2'
 }
+
+/******exercicio para fizacao 4*******/
+function inputGanhaFoco() {
+    document.getElementById('bg').style.background = "yellow"
+}
+function inputPerdeFoco() {
+    var valorInput = document.getElementById('bg').value
+
+    if (valorInput.length < 3) {
+        document.getElementById('bg').style.background = "red"
+    } else {
+        document.getElementById('bg').style.background = "green"
+    }
+}
