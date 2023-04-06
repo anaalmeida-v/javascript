@@ -682,7 +682,7 @@ function inputPerdeFoco() {
     }
 }
 
-/*********array
+/*********array - introdução
 
 listas ordenadas
 
@@ -691,14 +691,55 @@ variáveis que nos permitem relacionar itens associados à índices
 esse tipo de variável tenta imitar as listas do mundo real*********/
 
 //com variavel
-      var variavel_1 = 'Banana'
-      var variavel_2 = 'Maçã'
-      var variavel_3 = 'Morango'
-      var variavel_4 = 'Uva'
+var variavel_1 = 'Banana'
+var variavel_2 = 'Maçã'
+var variavel_3 = 'Morango'
+var variavel_4 = 'Uva'
 
-      //com um array()
-      var lista_frutas = Array();
-      lista_frutas[1] = 'Banana'
-      lista_frutas[2] = 'Maçã'
-      lista_frutas[3] = 'Morango'
-      lista_frutas[4] = 'Uva'
+//com um array()
+var lista_frutas = Array();
+lista_frutas[1] = 'Banana'
+lista_frutas[2] = 'Maçã'
+lista_frutas[3] = 'Morango'
+lista_frutas[4] = 'Uva'
+
+
+/**ARRAY PRÁTICA****/
+/* var lista_frutas = Array()
+  ou*/
+var lista_frutas = []
+lista_frutas[1] = 'Banana'
+lista_frutas[2] = 'Maçã'
+lista_frutas[3] = 'Morango'
+lista_frutas[4] = 'Uva'
+//pode-se mesclar indices, pode ser numérico ou string
+/*
+ex.: ['1'] ou [1] ou ['um']
+*/
+
+//quando o array é declarado dessas formas:
+var lista_frutas = Array('Banana', 'Maçã', 'Morango', 'Uva')
+var lista_frutas = ['Banana', 'Maçã', 'Morango', 'Uva'] //ao invés do array foram utilizadas as chaves para indicar o tipo da declaração dos elementos
+//o javascript tem a inteligência de associar um índice para cada elemento
+//parte da posição 0
+
+
+/******array - multidimensional**********/
+
+var lista_coisas = Array()
+
+lista_coisas['frutas'] = Array('Banana', 'Maçã', 'Morango', 'Uva')
+lista_coisas['pessoas'] = []
+
+/*lista_coisas['frutas'][1] = 'Banana'
+lista_coisas['frutas'][2] = 'Maçã'
+lista_coisas['frutas'][3] = 'Morango'
+lista_coisas['frutas'][4] = 'Uva'*/
+
+lista_coisas['pessoas']['a'] = 'João'
+lista_coisas['pessoas']['b'] = 'José'
+lista_coisas['pessoas']['c'] = 'Maria'
+
+document.write(lista_coisas['frutas'][3])
+document.write(lista_coisas['pessoas']['b'])
+        //exibindo elementos específicos do array
