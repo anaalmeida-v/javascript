@@ -681,3 +681,24 @@ function inputPerdeFoco() {
         document.getElementById('bg').style.background = "green"
     }
 }
+
+/*********array
+
+listas ordenadas
+
+variáveis que nos permitem relacionar itens associados à índices
+
+esse tipo de variável tenta imitar as listas do mundo real*********/
+
+//com variavel
+      var variavel_1 = 'Banana'
+      var variavel_2 = 'Maçã'
+      var variavel_3 = 'Morango'
+      var variavel_4 = 'Uva'
+
+      //com um array()
+      var lista_frutas = Array();
+      lista_frutas[1] = 'Banana'
+      lista_frutas[2] = 'Maçã'
+      lista_frutas[3] = 'Morango'
+      lista_frutas[4] = 'Uva'
