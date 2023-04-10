@@ -723,8 +723,6 @@ var lista_frutas = ['Banana', 'Maçã', 'Morango', 'Uva'] //ao invés do array f
 //o javascript tem a inteligência de associar um índice para cada elemento
 //parte da posição 0
 
-
-<<<<<<< HEAD
 /************inclusão e remoção de array*/
 /*var lista_frutas = Array()
 
@@ -821,4 +819,34 @@ function ordenaNumeros(a, b) {
     // < 0 = a ordenado anets de b
     // > 0 = b ordenado antes de a 
     // == a é mantida
+}
+
+/*******array - exerciciofixacao5************/
+var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+
+function botaoAdicionar() {
+    var objeto = document.getElementById('objeto').value
+    //na linha acima o valor do ID(adicionado dentro do input) foi recuperado
+
+    if (objeto != "") {
+        //caso o campo não esteja vazio, entra no if
+
+        if (valorInput.indexOf(objeto) !== -1) {
+            /*vericidade em relação ao valor ter sido inserido anteriormente.
+            se foi, exibe a mensagem a seguir*/
+            alert("Objeto já foi adicionado")
+        } else {
+            objetos.push(objeto)
+            console.log(objeto)
+
+            document.getElementById("objeto").value = ""
+        }
+    } else {
+        alert("Informe um objeto válido")
+    }
+}
+
+function botaoOrdenar() {
+    objetos.sort()
+    console.log(objetos)
 }
