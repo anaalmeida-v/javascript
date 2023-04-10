@@ -724,6 +724,7 @@ var lista_frutas = ['Banana', 'Maçã', 'Morango', 'Uva'] //ao invés do array f
 //parte da posição 0
 
 
+<<<<<<< HEAD
 /************inclusão e remoção de array*/
 var lista_frutas = Array()
 
@@ -753,3 +754,24 @@ lista_frutes['pessoas'] = []
 
 //lista_frutes.push('Uva')
 lista_frutes['frutes'].push('Banana') 
+=======
+/******array - multidimensional**********/
+
+var lista_coisas = Array()
+
+lista_coisas['frutas'] = Array('Banana', 'Maçã', 'Morango', 'Uva')
+lista_coisas['pessoas'] = []
+
+/*lista_coisas['frutas'][1] = 'Banana'
+lista_coisas['frutas'][2] = 'Maçã'
+lista_coisas['frutas'][3] = 'Morango'
+lista_coisas['frutas'][4] = 'Uva'*/
+
+lista_coisas['pessoas']['a'] = 'João'
+lista_coisas['pessoas']['b'] = 'José'
+lista_coisas['pessoas']['c'] = 'Maria'
+
+document.write(lista_coisas['frutas'][3])
+document.write(lista_coisas['pessoas']['b'])
+        //exibindo elementos específicos do array
+>>>>>>> 10d8c9a90a40e2e9a5462e5756f731c7ec4f9a74
