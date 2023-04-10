@@ -753,7 +753,7 @@ lista_frutes['frutas'] = Array()
 lista_frutes['pessoas'] = []
 
 //lista_frutes.push('Uva')
-lista_frutes['frutes'].push('Banana') 
+lista_frutes['frutes'].push('Banana')
 =======
 /******array - multidimensional**********/
 
@@ -775,3 +775,22 @@ document.write(lista_coisas['frutas'][3])
 document.write(lista_coisas['pessoas']['b'])
         //exibindo elementos específicos do array
 >>>>>>> 10d8c9a90a40e2e9a5462e5756f731c7ec4f9a74
+
+
+
+/*******array pesquisa***********/
+
+var lista_frutas = []
+
+lista_frutas[0] = 'Banana'
+lista_frutas[1] = 'Maçã'
+lista_frutas[2] = 'Morango'
+lista_frutas[3] = 'Uva'
+
+var auxiliar = lista_frutas.indexOf('Banana')
+
+if (lista_frutas.indexOf('Abacaxi') === -1) {
+    console.log('Elemento não existe')
+} else {
+    console.log('Elemento existe e está na posição ' + auxiliar)
+}
