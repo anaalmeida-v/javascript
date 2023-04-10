@@ -726,7 +726,7 @@ var lista_frutas = ['Banana', 'Maçã', 'Morango', 'Uva'] //ao invés do array f
 
 <<<<<<< HEAD
 /************inclusão e remoção de array*/
-var lista_frutas = Array()
+/*var lista_frutas = Array()
 
 lista_frutas[0] = 'Banana'
 lista_frutas[1] = 'Maçã'
@@ -753,8 +753,9 @@ lista_frutes['frutas'] = Array()
 lista_frutes['pessoas'] = []
 
 //lista_frutes.push('Uva')
-lista_frutes['frutes'].push('Banana')
-=======
+lista_frutes['frutes'].push('Banana')*/
+
+
 /******array - multidimensional**********/
 
 var lista_coisas = Array()
@@ -773,9 +774,7 @@ lista_coisas['pessoas']['c'] = 'Maria'
 
 document.write(lista_coisas['frutas'][3])
 document.write(lista_coisas['pessoas']['b'])
-        //exibindo elementos específicos do array
->>>>>>> 10d8c9a90a40e2e9a5462e5756f731c7ec4f9a74
-
+//exibindo elementos específicos do array
 
 
 /*******array pesquisa***********/
@@ -793,4 +792,33 @@ if (lista_frutas.indexOf('Abacaxi') === -1) {
     console.log('Elemento não existe')
 } else {
     console.log('Elemento existe e está na posição ' + auxiliar)
+}
+
+/**********array - ordenanação***********/
+
+var lista_frutas = Array()
+
+lista_frutas[0] = 'Maçã'
+lista_frutas[1] = 'Uva'
+lista_frutas[2] = 'Banana'
+lista_frutas[3] = 'Morango'
+
+lista_frutas.sort()
+
+var lista_numeros = Array()
+
+lista_numeros[0] = 12
+lista_numeros[1] = 40
+lista_numeros[2] = 3
+lista_numeros[3] = 7
+lista_numeros[4] = 19
+lista_numeros[5] = 1
+
+console.log(lista_numeros.sort(ordenaNumeros))
+
+function ordenaNumeros(a, b) {
+    return a - b
+    // < 0 = a ordenado anets de b
+    // > 0 = b ordenado antes de a 
+    // == a é mantida
 }
