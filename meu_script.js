@@ -682,7 +682,7 @@ function inputPerdeFoco() {
     }
 }
 
-/*********array
+/*********array - introdução
 
 listas ordenadas
 
@@ -691,14 +691,65 @@ variáveis que nos permitem relacionar itens associados à índices
 esse tipo de variável tenta imitar as listas do mundo real*********/
 
 //com variavel
-      var variavel_1 = 'Banana'
-      var variavel_2 = 'Maçã'
-      var variavel_3 = 'Morango'
-      var variavel_4 = 'Uva'
+var variavel_1 = 'Banana'
+var variavel_2 = 'Maçã'
+var variavel_3 = 'Morango'
+var variavel_4 = 'Uva'
 
-      //com um array()
-      var lista_frutas = Array();
-      lista_frutas[1] = 'Banana'
-      lista_frutas[2] = 'Maçã'
-      lista_frutas[3] = 'Morango'
-      lista_frutas[4] = 'Uva'
+//com um array()
+var lista_frutas = Array();
+lista_frutas[1] = 'Banana'
+lista_frutas[2] = 'Maçã'
+lista_frutas[3] = 'Morango'
+lista_frutas[4] = 'Uva'
+
+
+/**ARRAY PRÁTICA****/
+/* var lista_frutas = Array()
+  ou*/
+var lista_frutas = []
+lista_frutas[1] = 'Banana'
+lista_frutas[2] = 'Maçã'
+lista_frutas[3] = 'Morango'
+lista_frutas[4] = 'Uva'
+//pode-se mesclar indices, pode ser numérico ou string
+/*
+ex.: ['1'] ou [1] ou ['um']
+*/
+
+//quando o array é declarado dessas formas:
+var lista_frutas = Array('Banana', 'Maçã', 'Morango', 'Uva')
+var lista_frutas = ['Banana', 'Maçã', 'Morango', 'Uva'] //ao invés do array foram utilizadas as chaves para indicar o tipo da declaração dos elementos
+//o javascript tem a inteligência de associar um índice para cada elemento
+//parte da posição 0
+
+
+/************inclusão e remoção de array*/
+var lista_frutas = Array()
+
+lista_frutas[0] = 'Banana'
+lista_frutas[1] = 'Maçã'
+
+//incluir elemento no final do array
+lista_frutas.push('Uva')
+//push = nele que inclue-se o elemento que quer no final do array
+
+//incluir elemento no início do array
+lista_frutas.unshift('Uva')
+
+//excluir elemento do final do array
+lista_frutas.pop()
+//não é necessário incluir parâmetro por conta de ser um método de exclusão
+
+//excluir elemento do início do array
+lista_frutas.shift()
+
+'<hr>'
+
+var lista_frutes = Array()
+
+lista_frutes['frutas'] = Array()
+lista_frutes['pessoas'] = []
+
+//lista_frutes.push('Uva')
+lista_frutes['frutes'].push('Banana') 
