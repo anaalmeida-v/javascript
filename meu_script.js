@@ -850,3 +850,46 @@ function botaoOrdenar() {
     objetos.sort()
     console.log(objetos)
 }
+
+
+/* estruturas de repetição */
+/* while */
+var x = 1
+while (x <= 10) {
+    document.write(x + '<br>')
+
+    if (x === 5) {
+        break
+        //break - interrompe o bloco de repetição
+    }
+    if (x === 7) {
+        continue
+        //-finaliza aquele passo da interação e vai para o passo seguinte
+        /* -tem que ter muita atenção com essa condição pois ela pode gerar loops infinitos,
+        por conta da precendencia em cima de outros comandos*/
+    }
+    //assim que finalizadas as leituras das estruturas são lidas as coutras lindas
+
+    x++
+}
+
+/* do while */
+/* estrutura --
+        do{
+            //comandos
+        } while(condicao) {
+            //comandos
+        }
+        */
+
+var x = 11
+
+do {
+    document.write(x + '<br>')
+    //break
+    //continue
+    //podem ser utilizados
+} while (x <= 10) {
+
+}
+        //somente após a execução do bloco de códigos é que é feito o teste, diferente do 'while'
