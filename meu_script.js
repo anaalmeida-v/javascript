@@ -892,4 +892,31 @@ do {
 } while (x <= 10) {
 
 }
-        //somente após a execução do bloco de códigos é que é feito o teste, diferente do 'while'
+//somente após a execução do bloco de códigos é que é feito o teste, diferente do 'while'
+
+/* for 
+
+--estrutura:
+for (variavel; condicao; controle) {
+}
+*/
+
+for (var x = 10; x >= 0; x--) {
+    /*o bloco acima diz: x = 10 e a cada laço que ocorre, vai abaixando um número(x--), quando x for igual
+    a 0 o laço irá parar a execução(será false), pois x tem que ser (>= 0)*/
+    document.write(x + '<br>')
+
+    //break
+    //continue
+    //(funcionam  normalmente)
+}
+
+/*
+ * 
+ while
+do while
+for
+
+principais, porém não únicos blocos de repetição
+ * 
+ */
