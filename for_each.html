@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        /*atua somente com valores numéricos e int, iniciando do zero (caso o contrário a função é desconsiderada)
+          não é necessário que sejam sequenciais*/
+
+        var listaFuncionarios = ['Viviane', 'Rosângela', 'Miguel', 'Lucas', 'Fernanda']
+
+        var f = function (valor, indice) {
+            console.log(valor, indice)
+        }
+
+        listaFuncionarios.forEach(f)
+        /*
+        listaFuncionarios.forEach(function(valor, indice)) {
+            console.log(valor, indice)
+        }
+        */
+
+        /*
+        console.log(listaFuncionarios)
+        document.write(listaFuncionarios[3])
+
+        listaFuncionarios.forEach(function (valor, índice, array) {
+            //lógica
+            console.log('índice: ' + índice + ' | valor: ' + valor)
+
+            if (valor === 'Lucas') {
+                array[indice] = 'Um novo valor'
+            }
+            console.log(listaFuncionarios)
+            document.write('<br>' + listaFuncionarios[3])
+        })
+        */
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        var listaConvidados = ['Jorge', 'Jamilton', 'José', 'Ana', 'Maria']
+
+        listaConvidados['a'] = 'Jorge'
+        listaConvidados[10] = 'Jamilton'
+        listaConvidados['zebra'] = 'José'
+        listaConvidados[-1] = 'Ana'
+        listaConvidados[true] = 'Maria'
+
+        for (var x in listaConvidados) {
+            //a esquerda:criacao de variável - a direita:array a ser percorrido
+            console.log('Índice' + x + 'valor' + listaConvidados[x])
+        }
+
+        /*O laço for...in interage sobre propriedades enumeradas de um objeto,
+         na ordem original de inserção. O laço pode ser executado para cada
+          propriedade distinta do objeto.*/
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
