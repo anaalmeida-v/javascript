@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
-    
+
     <script>
 
         //void
@@ -28,7 +29,7 @@
         //-ordem obrigatória na declaração de valores de variáveis
             document.write('O terreno possui ' + area + ' metros quadrados')
         */
-
+        /*
         function soma(a, b) {
             //b = b === undefined ? 0 : b //se b === 0, exibirá '0', caso o contrário, exibirá 'b'
             return a + b
@@ -38,9 +39,23 @@
         console.log(soma(7,7,9,15)) // desconsidera os parâmetros adicionais
         console.log(soma(7)) //'a' vale 7 e b é undefined, resultado será not a number(NaN)
         console.log(soma())  //caso não haja parâmetros definidos, o valor dos números será undefined = not a number
+        */
+
+        function soma() {
+            var resultado = 0
+            for(var i in arguments) {
+                resultado += arguments[i]
+            }
+
+            return resultado
+        }
+
+        console.log(soma(2, 3, 5, 'tarde'))
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
