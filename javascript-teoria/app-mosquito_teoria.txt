@@ -1,0 +1,56 @@
+app mosquito - parte teórica
+
+defiinições de usabilidade de altura e largura do browser para a sua aplicação:
+innerWidth
+innerHeight
+ex de utilização.:
+	var altura = 0
+	var largura = 0
+	/*essas variáveis precisam ser criadas fora do escopo da função
+	para que assim seja possível redefinir o valor das mesmas*/
+ 
+	function ajustaTamanhoPalcoJogo() {
+ 		var altura = innerHeight
+		var largura = innerWidth
+ 
+    		console.log(altura, largura)	
+	/*encapsulamento feito pois é necessário que essas informações de altura e largura
+	estejam sempre atualizadas quando houver o ato de redimensionamento*/ 
+	}
+ 
+	ajustaTamanhoPalcoJogo()
+	//exibir/chamar função
+
+
+criações de posições randômicas
+
+objetivo - com base nos valores de largura e altura identificados, produzir de forma aleatória
+ valores correspondentes ao eixoX e eixoY e em seguida, criar um elemento html
+(de forma programática) e posicionar o  mesmo através dos recursos de style, 
+na posição que foi encontrada com base nos limitadores de altura e largura da página.
+
+var posicaoX = Math.floor(Math.random() * largura)
+var posicaoY = Math.floor(Math.random() * altura)
+//Math.random():foi criado valor randômico(valor aleatório de 0 a 1)
+//Math.floor: eliminar casas decimais que nesse caso é desnecessário
+/*multiplicação por largura e altura: a partir dessa multiplicação, o
+método Math.random() irá tentar achar um valor de 0 até o valor do tamanho da tela
+ex.: largura: de 0 a 733
+     altura: de 0 a 635
+*/
+console.log(posicaoX, posicaoY)
+
+//criar elemento html- document.createElement()
+    /*adicionado a uma variável, para facilitar quando for adicionar
+    esse método em outro elemento do DOM*/
+    var mosquito = document.createElement('img')
+    mosquito.src = 'imagens/mosquito.png'
+    mosquito.className = 'mosquito1'
+    mosquito.style.left = posicaoX + 'px'
+    //concatenando valor das variáveis de posições X e Y com a String 'px', para formar a cordenada em px
+    mosquito.style.top = posicaoY + 'px'
+    mosquito.style.position = 'absolute'
+
+    //adicionando um filho para o body
+    document.body.appendChild(mosquito)
+

@@ -4,13 +4,59 @@ var largura = 0
 para que assim seja possível redefinir o valor das mesmas*/
 
 function ajustaTamanhoPalcoJogo() {
-    var altura = innerHeight
-    var largura = innerWidth
+    altura = window.innerHeight
+    largura = window.innerWidth
 
     console.log(altura, largura)
-/*encapsulamento feito pois é necessário que essas informações de altura e largura
-estejam sempre atualizadas quando houver o ato de redimensionamento*/ 
+    /*encapsulamento feito pois é necessário que essas informações de altura e largura
+    estejam sempre atualizadas quando houver o ato de redimensionamento*/
 }
 
 ajustaTamanhoPalcoJogo()
 //exibir/chamar função
+
+function posicaoRandomica() {
+
+    var posicaoX = Math.floor(Math.random() * largura) - 90
+    var posicaoY = Math.floor(Math.random() * altura) - 90
+    //Math.random():foi criado valor randômico(valor aleatório de 0 a 1)
+    //Math.floor: eliminar casas decimais que nesse caso é desnecessário
+    /*multiplicação por largura e altura: a partir dessa multiplicação, o
+    método Math.random() irá tentar achar um valor de 0 até o valor do tamanho da tela
+    ex.: largura: de 0 a 733
+         altura: de 0 a 635
+    */
+
+    posicaoX = posicaoX < 0 ? 0 : posicaoX
+    posicaoY = posicaoY < 0 ? 0 : posicaoY
+
+    console.log(posicaoX, posicaoY)
+
+    //criar elemento html- document.createElement()
+    /*adicionado a uma variável, para facilitar quando for adicionar
+    esse método em outro elemento do DOM*/
+    var mosquito = document.createElement('img')
+    mosquito.src = 'imagens/mosquito.png'
+    mosquito.className = tamanhoAleatorio()
+    mosquito.style.left = posicaoX + 'px'
+    //concatenando valor das variáveis de posições X e Y com a String 'px', para formar a cordenada em px
+    mosquito.style.top = posicaoY + 'px'
+    mosquito.style.position = 'absolute'
+
+    //adicionando um filho para o body
+    document.body.appendChild(mosquito)
+}
+
+function tamanhoAleatorio() {
+    var classe = Math.floor(Math.random() * 3)
+
+    switch (classe) {
+        case 0:
+            return 'mosquito1'
+        case 1:
+            return 'mosquito2'
+        case 2:
+            return 'mosquito3'
+    }
+}
+//função criada para que o mosquito apareça em tamanhos aleatorios
