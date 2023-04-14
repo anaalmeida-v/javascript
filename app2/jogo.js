@@ -37,7 +37,9 @@ function posicaoRandomica() {
     esse método em outro elemento do DOM*/
     var mosquito = document.createElement('img')
     mosquito.src = 'imagens/mosquito.png'
-    mosquito.className = tamanhoAleatorio()
+    mosquito.className = tamanhoAleatorio() + ladoAleatorio()
+    /*na var tamanhoAleatorio() há três classes relacionadas ao tamanho
+    e na var ladoAleatorio() há duas classes relacionadas ao lado que o mosquito esta virado*/
     mosquito.style.left = posicaoX + 'px'
     //concatenando valor das variáveis de posições X e Y com a String 'px', para formar a cordenada em px
     mosquito.style.top = posicaoY + 'px'
@@ -60,3 +62,15 @@ function tamanhoAleatorio() {
     }
 }
 //função criada para que o mosquito apareça em tamanhos aleatorios
+
+function ladoAleatorio(){
+    var classe = Math.floor(Math.random() * 2)
+    //valor aleatório entre 0 e 2
+
+    switch(classe) {
+        case 0:
+            return 'ladoA'
+        case 1:
+            return 'ladoB'
+    }
+}
