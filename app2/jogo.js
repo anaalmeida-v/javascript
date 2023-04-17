@@ -1,9 +1,28 @@
+
 var altura = 0
 var largura = 0
 var vidas = 1
 var tempo = 15
+
+var criaMosquitoTempo = 1500
+
+var nivel = window.location.search
+//rapleca()- pesquisa uma string em busca de um valor ou uma expressão regular
+//no exemplo abaixo, substituição de todos os caracteres de interrogação dentro da string nível para um caracter vazio
+nivel = nivel.replace('?', '')
 /*essas variáveis precisam ser criadas fora do escopo da função
 para que assim seja possível redefinir o valor das mesmas*/
+
+if (nivel === 'normal') {
+    //1500
+    criaMosquitoTempo = 1500
+} else if (nivel === 'dificil') {
+    //1000
+    criaMosquitoTempo = 1000
+} else if (nivel === 'chucknorris') {
+    //750
+    criaMosquitoTempo = 750
+}
 
 function ajustaTamanhoPalcoJogo() {
     altura = window.innerHeight
@@ -24,11 +43,12 @@ var cronometro = setInterval(function () {
 
     if (tempo < 0) {
         clearInterval(cronometro)
-        clearInterval(criaMosquito)
+        clearInterval(criaMosca)
         window.location.href = 'vitoria.html'
     } else {
         document.getElementById('cronometro').innerHTML = tempo
     }
+
 }, 1000)
 
 function posicaoRandomica() {
@@ -36,14 +56,14 @@ function posicaoRandomica() {
     //caso exista, remover o mosquito anterior
     if (document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove()
+
         //.remove - remove o respectivo elemento selecionado
 
         //console.log('elemento selecionado foi: v + vidas')
         if (vidas > 3) {
-            //game over
+
             window.location.href = 'fim_de_jogo.html'
         } else {
-            //controlando pontos de vida
             document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
 
             vidas++
@@ -68,8 +88,8 @@ function posicaoRandomica() {
     //criar elemento html- document.createElement()
     /*adicionado a uma variável, para facilitar quando for adicionar
     esse método em outro elemento do DOM*/
-    var mosquito = document.createElement('img')
-    mosquito.src = 'imagens/mosquito.png'
+	var mosquito = document.createElement('img')
+	mosquito.src = 'imagens/mosquito.png'
     mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
     /*na var tamanhoAleatorio() há três classes relacionadas ao tamanho
     e na var ladoAleatorio() há duas classes relacionadas ao lado que o mosquito esta virado*/
