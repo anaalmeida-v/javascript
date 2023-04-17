@@ -6,13 +6,14 @@ var tempo = 15
 
 var criaMosquitoTempo = 1500
 
-var nivel = window.location.search
+var nivel = window.location.search//o search recupera o ponto de interrogação, e tudo que estiver a direita do mesmo
 //rapleca()- pesquisa uma string em busca de um valor ou uma expressão regular
-//no exemplo abaixo, substituição de todos os caracteres de interrogação dentro da string nível para um caracter vazio
 nivel = nivel.replace('?', '')
+//substituição de todos os caracteres de interrogação dentro da string nível para um caracter vazio
 /*essas variáveis precisam ser criadas fora do escopo da função
 para que assim seja possível redefinir o valor das mesmas*/
 
+//definição da dificuldade dos níveis
 if (nivel === 'normal') {
     //1500
     criaMosquitoTempo = 1500
@@ -38,16 +39,16 @@ ajustaTamanhoPalcoJogo()
 
 //elementos criados nesse local por questões de precedência
 var cronometro = setInterval(function () {
-
     tempo -= 1
-
+    //a cada um segundo é adicionado esse incremento ao valor
     if (tempo < 0) {
         clearInterval(cronometro)
-        clearInterval(criaMosca)
+        clearInterval(criaMosquito)
         window.location.href = 'vitoria.html'
     } else {
-        document.getElementById('cronometro').innerHTML = tempo
-    }
+        document.getElementById('cronometro'). innerHTML = tempo
+    }//innerHTML- tudo que vai entre as tags é inner, ou seja, está dentro
+    //atribui-se o valor que quer incluir dentro da tag HTML(nesse caso, tempo)
 
 }, 1000)
 
@@ -60,13 +61,18 @@ function posicaoRandomica() {
         //.remove - remove o respectivo elemento selecionado
 
         //console.log('elemento selecionado foi: v + vidas')
+        //quando vidas for maior que 3, o jogador perde
         if (vidas > 3) {
 
-            window.location.href = 'fim_de_jogo.html'
+            window.location.href = 'fim_de_jogo.html'//forçando a página ser redirecionada
         } else {
+            //selecionando id's do arquivo app.html, par assim executar a seguinte função...
             document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
+            /*modificando o caminho do src, para quando 'v', não tiver mais vidas, exibir a
+            imagem modificada*/
 
             vidas++
+            //adicionano o elemento
         }
     }
 
@@ -98,9 +104,10 @@ function posicaoRandomica() {
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
     mosquito.id = 'mosquito'
+    //elemento onclick no js
     mosquito.onclick = function () {
         this.remove()
-        //this - ajusta o contexto de um determinado atributo ou método
+        //this - ajusta o contexto de um determinado atributo ou método, faz referência ao próprio elemento html que executa a função
     }
 
     //adicionando um filho para o body

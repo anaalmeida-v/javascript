@@ -1,0 +1,10 @@
+JAVASCRIPT - reforçando sobre a linguagem(prof-jose-de-assis)
+
+Bibliotecas e Frameworks - utilizados para adicionar recursos e reduzir cods
+-jQuery: popular com recursos, como manipulação de eventos, animação....
+-Angular JS: Reduz linhas de código, etruturação em camadas, criação de componentes reutilizáveis e modulares
+(integrado com BackEnd)
+-nodeJS: plataforma de código aberto para execução do JS no backend, garante muito desempenho na parte 
+de entrada e saída
+-React Native: baseada em js, permite criar aplicativos móveis renderizados nativamente para iOS e Android, 
+permite criar um aplicativo para várias plataformas usando a mesma base de código

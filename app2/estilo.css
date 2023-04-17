@@ -1,5 +1,6 @@
 html {
     cursor: url(imagens/mata_mosquito.png) 30 30, auto;
+    /*adicionando a raquete no cursor para dar uma dinâmica melhor ao jogo*/
 }
 
 body {

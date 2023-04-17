@@ -13,15 +13,16 @@
 
     <script>
         function iniciarJogo() {
+            //niveis de dificuldade do jogo
             var nivel = document.getElementById('nivel').value
 
             if (nivel === '') {
                 alert('Selecione um nível para iniciar o jogo')
-                return false
+                return false//para que função finalize a lógica
             }
 
             window.location.href = "app.html?" + nivel
-
+            //sinal de interrogação - separa a página que será requisitada e os parâmetros a serem encaminhados
         }
     </script>
 </head>
