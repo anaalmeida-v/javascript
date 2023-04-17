@@ -29,35 +29,50 @@ objetivo - com base nos valores de largura e altura identificados, produzir de f
 (de forma programática) e posicionar o  mesmo através dos recursos de style, 
 na posição que foi encontrada com base nos limitadores de altura e largura da página.
 
-var posicaoX = Math.floor(Math.random() * largura)
-var posicaoY = Math.floor(Math.random() * altura)
-//Math.random():foi criado valor randômico(valor aleatório de 0 a 1)
-//Math.floor: eliminar casas decimais que nesse caso é desnecessário
-/*multiplicação por largura e altura: a partir dessa multiplicação, o
-método Math.random() irá tentar achar um valor de 0 até o valor do tamanho da tela
-ex.: largura: de 0 a 733
-     altura: de 0 a 635
-*/
-console.log(posicaoX, posicaoY)
+ function posicaoRandomica() {
 
-//criar elemento html- document.createElement()
-    /*adicionado a uma variável, para facilitar quando for adicionar
-    esse método em outro elemento do DOM*/
-    var mosquito = document.createElement('img')
-    mosquito.src = 'imagens/mosquito.png'
-    //mosquito.className = 'mosquito1'
-    mosquito.className = tamanhoAleatorio()//dentro dessa variável, há três classes relacionadas ao tamanho
-    mosquito.style.left = posicaoX + 'px'
-    //concatenando valor das variáveis de posições X e Y com a String 'px', para formar a cordenada em px
-    mosquito.style.top = posicaoY + 'px'
-    mosquito.style.position = 'absolute'
+    //caso exista, remover o mosquito anterior
+    if (document.getElementById('mosquito')) {
+        document.getElementById('mosquito').remove()
+        //.remove - remove o respectivo elemento selecionado
+    }
 
-    //adicionando um filho para o body
-    document.body.appendChild(mosquito)
+    var posicaoX = Math.floor(Math.random() * largura) - 90
+    var posicaoY = Math.floor(Math.random() * altura) - 90
+    //Math.random():foi criado valor randômico(valor aleatório de 0 a 1)
+    //Math.floor: eliminar casas decimais que nesse caso é desnecessário
+    /*multiplicação por largura e altura: a partir dessa multiplicação, o
+    método Math.random() irá tentar achar um valor de 0 até o valor do tamanho da tela
+    ex.: largura: de 0 a 733
+         altura: de 0 a 635
+    */
 
+    posicaoX = posicaoX < 0 ? 0 : posicaoX
+    posicaoY = posicaoY < 0 ? 0 : posicaoY
+
+    console.log(posicaoX, posicaoY)
+
+    //criar elemento html- document.createElement()
+    /*adicionado a uma variável, para facilitar quando for adicionar
+    esse método em outro elemento do DOM*/
+    var mosquito = document.createElement('img')
+    mosquito.src = 'imagens/mosquito.png'
+    mosquito.className = tamanhoAleatorio() + ladoAleatorio()
+    /*na var tamanhoAleatorio() há três classes relacionadas ao tamanho
+    e na var ladoAleatorio() há duas classes relacionadas ao lado que o mosquito esta virado*/
+    mosquito.style.left = posicaoX + 'px'
+    //concatenando valor das variáveis de posições X e Y com a String 'px', para formar a cordenada em px
+    mosquito.style.top = posicaoY + 'px'
+    mosquito.style.position = 'absolute'
+    mosquito.id = 'mosquito'
+
+    //adicionando um filho para o body
+    document.body.appendChild(mosquito)
+}
 
 function tamanhoAleatorio() {
     var classe = Math.floor(Math.random() * 3)
+
     switch (classe) {
         case 0:
             return 'mosquito1'
@@ -68,3 +83,16 @@ function tamanhoAleatorio() {
     }
 }
 //função criada para que o mosquito apareça em tamanhos aleatorios
+
+function ladoAleatorio() {
+    var classe = Math.floor(Math.random() * 2)
+    //valor aleatório entre 0 e 2
+
+    switch (classe) {
+        case 0:
+            return 'ladoA'
+        case 1:
+            return 'ladoB'
+    }
+}
+-->scale()método aumenta ou diminui o tamanho de um elemento (de acordo com os parâmetros fornecidos para largura e altura).

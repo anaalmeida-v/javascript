@@ -17,6 +17,12 @@ ajustaTamanhoPalcoJogo()
 
 function posicaoRandomica() {
 
+    //caso exista, remover o mosquito anterior
+    if (document.getElementById('mosquito')) {
+        document.getElementById('mosquito').remove()
+        //.remove - remove o respectivo elemento selecionado
+    }
+
     var posicaoX = Math.floor(Math.random() * largura) - 90
     var posicaoY = Math.floor(Math.random() * altura) - 90
     //Math.random():foi criado valor randômico(valor aleatório de 0 a 1)
@@ -37,13 +43,14 @@ function posicaoRandomica() {
     esse método em outro elemento do DOM*/
     var mosquito = document.createElement('img')
     mosquito.src = 'imagens/mosquito.png'
-    mosquito.className = tamanhoAleatorio() + ladoAleatorio()
+    mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
     /*na var tamanhoAleatorio() há três classes relacionadas ao tamanho
     e na var ladoAleatorio() há duas classes relacionadas ao lado que o mosquito esta virado*/
     mosquito.style.left = posicaoX + 'px'
     //concatenando valor das variáveis de posições X e Y com a String 'px', para formar a cordenada em px
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
+    mosquito.id = 'mosquito'
 
     //adicionando um filho para o body
     document.body.appendChild(mosquito)
@@ -63,11 +70,11 @@ function tamanhoAleatorio() {
 }
 //função criada para que o mosquito apareça em tamanhos aleatorios
 
-function ladoAleatorio(){
+function ladoAleatorio() {
     var classe = Math.floor(Math.random() * 2)
     //valor aleatório entre 0 e 2
 
-    switch(classe) {
+    switch (classe) {
         case 0:
             return 'ladoA'
         case 1:
