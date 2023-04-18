@@ -8,3 +8,7 @@ Bibliotecas e Frameworks - utilizados para adicionar recursos e reduzir cods
 de entrada e saída
 -React Native: baseada em js, permite criar aplicativos móveis renderizados nativamente para iOS e Android, 
 permite criar um aplicativo para várias plataformas usando a mesma base de código
+
+DOM - Document Object Model - Modelo de Documento do Objeto - uma forma de manipular o layout do site
+através do código
+-também conhecido como API(Application Programming Interface)
